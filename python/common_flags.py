@@ -47,7 +47,7 @@ def define():
   flags.DEFINE_integer('crop_height', None,
                        'Height of the central crop for images.')
 
-  flags.DEFINE_string('train_log_dir', '/home/ucmed/opt/python/models-master/research/attention_ocr/python/logs',
+  flags.DEFINE_string('train_log_dir', './logs',
                       'Directory where to write event logs.')
 
   flags.DEFINE_string('dataset_name', 'fsns',

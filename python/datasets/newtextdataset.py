@@ -17,7 +17,7 @@ DEFAULT_CONFIG = {
     },
     'charset_filename':
         'dic.txt',
-    'image_shape': (150, 600, 3),
+    'image_shape': (32, 500, 3),
     'num_of_views':
         1,
     'max_sequence_length':
