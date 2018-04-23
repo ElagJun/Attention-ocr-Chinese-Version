@@ -49,7 +49,8 @@ def load_images(file_pattern, batch_size, dataset_name):
   images_actual_data = np.ndarray(shape=(batch_size, height, width, 3),
                                   dtype='uint8')
   for i in range(batch_size):
-    path = file_pattern % i
+#    path = file_pattern % i
+    path = file_pattern
     print("Reading %s" % path)
     pil_image = PIL.Image.open(tf.gfile.GFile(path,'rb'))
     pil_image=pil_image.resize((600,150),PIL.Image.ANTIALIAS)
@@ -92,7 +93,7 @@ def main(_):
   predictions = run(FLAGS.checkpoint, FLAGS.batch_size, FLAGS.dataset_name,
                   FLAGS.image_path_pattern)
   for line in predictions:
-    print(line)
+    print(line.decode('utf-8'))
 
 
 if __name__ == '__main__':
